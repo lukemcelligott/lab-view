@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Lab Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Docker Containers</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Status</th>
+            <th>Uptime</th>
+        </tr>
+        {% for container in containers %}
+        <tr>
+            <td>{{ container.name }}</td>
+            <td>{{ container.image }}</td>
+            <td>{{ container.status }}</td>
+            <td>{{ container.uptime }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
